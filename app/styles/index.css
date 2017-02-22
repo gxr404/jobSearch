@@ -345,7 +345,7 @@ body {
   background-color: #5e5e5e; }
 
 .page1 {
-  background-image: url("../images/bg2.png");
+  background-image: url("../images/bg2.jpg");
   background-position: center center;
   z-index: 100; }
   .page1 .warp {
@@ -440,7 +440,7 @@ body {
   -moz-animation-fill-mode: forwards; }
 
 .page2 {
-  background-image: url("../images/bg2.png");
+  background-image: url("../images/bg2.jpg");
   background-position: center center;
   z-index: 99; }
   .page2 .warp2 {
@@ -591,7 +591,7 @@ body {
     z-index: 1; }
 
 .page3 {
-  background-image: url("../images/bg2.png");
+  background-image: url("../images/bg2.jpg");
   background-position: center center;
   z-index: 98; }
   .page3 .warp3 {
@@ -752,7 +752,7 @@ body {
   bottom: 0%; }
 
 .page4 {
-  background-image: url("../images/bg2.png");
+  background-image: url("../images/bg2.jpg");
   background-position: center center;
   z-index: 97; }
   .page4 .warp4 {
@@ -830,7 +830,7 @@ body {
   opacity: 1; }
 
 .page5 {
-  background-image: url("../images/bg2.png");
+  background-image: url("../images/bg2.jpg");
   background-position: center center;
   z-index: 95; }
   .page5 .warp5 {

@@ -21,14 +21,14 @@ module.exports = function(grunt) {
 				files: ['<%= config.app %>/scripts/{,*/}*.js'],
 				tasks: ['jshint'],
 				options: {
-					livereload: true //会触发livereload通知 
+					livereload: true //会触发livereload通知
 				}
 			},
 			sass: {
 				files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
 				tasks: ['sass', 'cssmin:app'], //'autoprefixer',
 				options: {
-					livereload: true //会触发livereload通知 
+					livereload: true //会触发livereload通知
 				}
 			},
 
@@ -104,8 +104,8 @@ module.exports = function(grunt) {
 		},
 		cssmin: {
 			// options: {
-			// 	// compatibility: 'ie8', //设置兼容模式 
-			// 	// noAdvanced: true //取消高级特性 
+			// 	// compatibility: 'ie8', //设置兼容模式
+			// 	// noAdvanced: true //取消高级特性
 			// 	// ,sourceMap:true
 			// 	// ,report:'gzip',
 			// 	shorthandCompacting: false,
@@ -136,19 +136,19 @@ module.exports = function(grunt) {
 						'<%= config.dist %>/scripts/scripts.js'
 					]
 				}
-			},	
+			},
 			ys:{
 				src:'<%= config.app %>/scripts/config.js',
 				dest:'<%= config.dist %>/scripts/config.js'
 			},
 			ie:{
 				src:'<%= config.app %>/scripts/ie.js',
-				dest:'<%= config.dist %>/scripts/ie.js'			
+				dest:'<%= config.dist %>/scripts/ie.js'
 			},
 			typerwriter:
 			{
 				src:'<%=config.app%>/scripts/typerwriter.js',
-				dest:'<%= config.dist %>/scripts/typerwriter.js'	
+				dest:'<%= config.dist %>/scripts/typerwriter.js'
 			}
 		},
 
@@ -209,10 +209,14 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('serverApp', [
+		'sass',
+		'cssmin:app',
 		'connect:serverApp',
 		'watch'
 	]);
 	grunt.registerTask('serverDist', [
+		'sass',
+		'cssmin:dist',
 		'connect:serverDist',
 		'watch'
 	]);
@@ -224,6 +228,6 @@ module.exports = function(grunt) {
 			'uglify',
 			'cssmin:dist',
 			'copy'
-			
+
 	]);
 };
