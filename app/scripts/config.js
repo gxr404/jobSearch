@@ -1,5 +1,5 @@
 require.config({
-	baseUrl: '/scripts',
+	baseUrl: './scripts',
 	paths: {
 		'jquery': 'libs/jquery.min',
 		'jquery.fullPage': 'libs/jquery.fullPage.min',
@@ -16,12 +16,12 @@ require.config({
 	waitSeconds:120
 });
 require(['jquery', 'jquery.fullPage','typerwriter'], function($, fullpage,typerwriter) {
-	
+
 
 	// alert($().jquery);
 	var typerwriterJSQ,aa2JSQ,lineInfoJSQ,lineInfo2JSQ,signJSQ,waveJSQ,page3JSQ;//,page5JSQ;
 	typerwriter.btext=$('#typerwriter').html();
-	
+
 
 	$('#fullpage').fullpage({
 		// 'verticalCentered': false,
@@ -36,7 +36,7 @@ require(['jquery', 'jquery.fullPage','typerwriter'], function($, fullpage,typerw
 			$('.radius-wrap').attr('class', 'radius-wrap state'+nextIndex);
 			// alert(index);
 			// console.log("x22");
-			// 
+			//
 			if(nextIndex===1){
 				$("#page1").addClass("active2");
 			}
@@ -48,7 +48,7 @@ require(['jquery', 'jquery.fullPage','typerwriter'], function($, fullpage,typerw
 				 clearTimeout(typerwriterJSQ);
 				 clearTimeout(aa2JSQ);
 				 clearTimeout(lineInfoJSQ);
-				 clearTimeout(lineInfo2JSQ); 
+				 clearTimeout(lineInfo2JSQ);
 				 clearTimeout(signJSQ);
 				 clearTimeout(waveJSQ);
 				 // $('#typerwriter').html("");
@@ -98,24 +98,24 @@ require(['jquery', 'jquery.fullPage','typerwriter'], function($, fullpage,typerw
 			// alert(index);
 			$('.nav-list').find("li").find("a").removeClass("xz");
 			$('.nav-list').find("li").eq(index-1).find("a").addClass("xz");
-			
+
 			if(index===1){
 				// $('.nav-list').
 				$(".warp").addClass("warp-into");
 			}
-			
+
 			if(index===2){
-			
+
 				$("#mapwarp").css({"overflow":"inherit"});
 				typerwriterJSQ=setTimeout(aa('#typerwriter'),1500);
 				aa2JSQ=setTimeout(aa2,1500);
 				lineInfoJSQ=setTimeout(lineInfo,5000);
-			}else{				
+			}else{
 				$('#typerwriter').removeClass("txtTmd");
 				$(".sign").removeClass("signInfo");
 				$(".line2").height(0);
 				$(".line").width(0);
-				$(".wave").removeClass("waveInfo");	
+				$(".wave").removeClass("waveInfo");
 				// $('#typerwriter').html("");
 			}
 
