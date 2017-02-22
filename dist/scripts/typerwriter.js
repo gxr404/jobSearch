@@ -1,0 +1,2 @@
+/*!2017-02-22*/
+define(function(){var a={e:0,btext:" ",jsq:"",typewriter:function(a){0!=this.e&&$(a).html(this.btext);var b=$(a),c=b.html(),d=0,e=0;this.btext=b.html(),b.html("");var f=this;this.e=function(){if("<"==c.substring(d,d+1))for(;">"!=c.substring(d,d+1);)d++;b.html(c.substring(e,d++)+(1&d?"_":"")),!d>=c.length,this.jsq=setTimeout(f.e,40+1*Math.random()),c.length<d&&clearTimeout(this.jsq)},this.e()},qping:function(a){this.e=1,clearTimeout(this.jsq),$(a).html(this.btext)}};return a});
